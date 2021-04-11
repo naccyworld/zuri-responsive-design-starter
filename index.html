@@ -5,22 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Webpage</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="nav-bar">
         <div class="logo">Snapshot</div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <div id="ham-button" class="hamburger-button" onclick="hamburgerMenu()">
+            <i id="ham-icon" class="fas fa-bars"></i>
+        </div>
+        <div id="right-nav" class="menu-overlay">
+            <ul class="nav-links overlay-content">
+                <li><a href="#home"><div onclick= "hamburgerMenu()">Home</div></a></li>
+                <li><a href="#footer"><div onclick= "hamburgerMenu()">About</div></a></li>
+                <li><a href="#gallery"><div onclick= "hamburgerMenu()">Gallery</div></a></li>
+                <li><a href="#footer"><div onclick= "hamburgerMenu()">Contact</div></a></li>
+            </ul>
+        </div>
     </div>
 
     <!-- Hero section -->
 
-    <div class="hero-section">
+    <div id="home" class="hero-section">
         <div class="hero-content-heading">
             <h3>Let's take a snapshot</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero beatae quod molestias voluptas nam <br> facere numquam quos pariatur repellendus excepturi!</p>
@@ -60,7 +66,7 @@
     </div>
 
     <!-- Gallery section -->
-    <div class="gallery-section">
+    <div id="gallery" class="gallery-section">
         <div class="gallery-content">
             <h4>Gallery</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, sapiente. Nullae rem!</p>
@@ -86,7 +92,7 @@
     </div>
 
     <!-- Footer section -->
-    <div class="footer">
+    <div id="footer" class="footer">
         <div class="footer-content">
             <h4>Send a message</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, sapiente. Nuleos rem!</p>
@@ -103,5 +109,6 @@
         </div>
         <h6>Copyright &copy; 2021 Zuri Training.</h6>
     </div>
+    <script src="/burger.js"></script>
 </body>
 </html>

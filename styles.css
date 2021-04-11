@@ -35,13 +35,91 @@ ul li {
 ul li a {
     text-decoration: none;
     color: #88949B;
-    padding: 0.5vw;
 }
 
 ul li a:hover {
     color: #304353;
-    background: #fff;
+    background: #FFF;
     padding: 0.5rem;
+}
+
+.hamburger-button {
+    display: none;
+}
+  
+.menu-overlay {
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    div.nav-bar {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    div.logo {
+        font-size: 1rem;
+    }
+
+    ul.nav-links {
+        flex-direction: column;
+    }
+
+    ul li {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    ul li a {
+        display: block;
+        transition: 0.3s;
+        padding-top: 1vw;
+    }
+
+    .nav-links li a,
+    .hamburger-button {
+        text-decoration: none;
+        visibility: visible;
+        color: #bcc3c7;
+    }
+
+  /* Hamburger button */
+    .hamburger-button {
+        display: block;
+        font-size: 1.5rem;
+        color: #bcc3c7;
+        background-color: transparent;
+        border: none;
+        position: fixed;
+        right: 1rem;
+        top: 0.5rem;
+        z-index: 30;
+    }
+
+    .menu-overlay {
+        height: fit-content;
+        width: 80px;
+        position: fixed;
+        text-align: center;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: rgb(41, 53, 72);
+        background-color: rgba(41, 53, 72, 0.7);
+        overflow-x: hidden;
+        transition: 0.5s;
+        display: none;
+    }
+
+    .menu-overlay .overlay-content {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 40px;
+    }
 }
 
 div.hero-section {
@@ -95,6 +173,22 @@ div.hero-background {
     align-items: center;
 }
 
+@media screen and (max-width: 768px) {  
+    div.hero-section {
+        padding: 5rem 2rem;
+        width: 100%;
+    }
+    div.hero-content-heading h3 {
+        font-size: 1.6rem;
+        text-transform: initial;
+        text-align: center;
+    }
+    
+    div.hero-content-heading p {
+        font-size: 0.7rem;
+    }
+}
+
 div.background {
     background: #fff;
     box-shadow: 2px 2px 15px 0 rgb(135 135 135 / 40%);
@@ -130,6 +224,32 @@ div.hero-background-pos {
     box-shadow: 2px 2px 15px 0 rgb(135 135 135 / 40%);
 }
 
+@media screen and (max-width: 768px) {
+    div.hero-background {
+        padding: 2.9rem;
+    }
+
+    div.background {
+        padding: 10px 31px;
+        width: 80vw;
+        height: 245px;
+    }
+    
+    div.background h4 {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+    
+    div.background p {
+        padding-left: 1rem;
+        font-size: x-small;
+    }
+    
+    div.hero-background-pos {
+        display: none;
+    }
+}
+
 div.snapshot-team {
     background: #f0f0f0;
     text-align: center;
@@ -148,6 +268,16 @@ div.snapshot-team p {
     font-size: 1rem;
     letter-spacing: 2px;
     padding-top: 0.8rem;
+}
+
+@media screen and (max-width: 768px) {
+    div.snapshot-team h2 {
+        font-size: 1.15rem;
+    }
+    
+    div.snapshot-team p {
+        font-size: 0.7rem;
+    }
 }
 
 div.snapshot-box {
@@ -208,6 +338,21 @@ div.box1 h5 {
     font-size: 1rem;
 }
 
+@media screen and (max-width: 768px) {
+    div.snapshot-box {
+        padding: 2rem 0.1rem;
+    }
+    
+    div.snapshot-box-content {
+        flex-direction: column;
+    }
+
+    div.box1,
+    div.box3 {
+        width: 300px;
+    }
+}
+
 div.gallery-section {
     background: #fff;
     padding: 4rem;
@@ -245,6 +390,25 @@ div.img {
 div.img img {
     width: 250px;
     height: 180px;
+}
+
+@media screen and (max-width: 768px) {
+    div.gallery-section {
+        width: 100%;
+        padding: 2rem;
+    }
+    
+    div.gallery-content h4 {
+        font-size: 1.3rem;
+    }
+    
+    div.gallery-content p {
+        font-size: 0.9rem;
+    }
+    
+    div.img img {
+        width: 300px;
+    }
 }
 
 div.footer {
